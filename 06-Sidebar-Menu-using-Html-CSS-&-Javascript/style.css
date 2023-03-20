@@ -23,7 +23,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  trasition: 0.5s;
+  transition: 0.3s;
+}
+
+.navigation.active {
+  width: 250px;
 }
 
 .menuToggle {
@@ -58,4 +62,14 @@ body {
   background: #333;
   transform: translateY(8px);
   box-shadow: 0 -8px 0 #333;
+  transition: 0.5s;
+}
+
+.navigation.active .menuToggle::before {
+  transform: translate(0) rotate(45deg);
+}
+
+.navigation.active .menuToggle::after {
+  transform: translate(0) rotate(-45deg);
+  box-shadow: none;
 }
